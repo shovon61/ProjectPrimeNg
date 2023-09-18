@@ -1,0 +1,27 @@
+<button pButton type="button" label="Click" ></button>
+<p-button label="Click" ></p-button>
+
+<br><br>
+
+<div>
+    <label>Title</label> <br>
+    <input type="text" pTooltip="Enter your Title" tooltipPosition="top" pInputText > 
+</div>
+
+<br><br>
+
+<div class="card flex justify-content-center">
+    <label>Publish At</label> <br>
+    <p-calendar [showIcon]="true"></p-calendar>
+</div>
+
+<br><br>
+
+<div>
+    <p-multiSelect [options]="userList" placeholder="Select" [(ngModel)]="selectedUser" [selectedItemsLabel]="'Total Selected = {0}'" ></p-multiSelect>
+    <br><br>
+    <textarea [rows]="10" [cols]="50" pInputTextarea [autoResize]="true"> {{selectedUser | json}} </textarea>
+</div>
+
+
+<router-outlet></router-outlet>
